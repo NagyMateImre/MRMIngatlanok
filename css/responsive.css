@@ -1,13 +1,19 @@
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 480px) {
     header {
-        width: 100%;
+        columns: 1;
+        margin-bottom: 150px;
     }
 
-    header > div {
+    .MRM{
+        font-size: small;
+        line-height: 25px;
+        margin-left: auto;
+        margin-right: auto;
         display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        gap: 15px;
+    }
+
+    .logo{
+        margin-left: -25px;
     }
 
     nav ul{
@@ -17,13 +23,18 @@
         row-gap: 20px;
     }
 
-    .logo{
-        margin-left: -30px;
+    footer{
+        columns: 3;
     }
-    .MRM{
-        text-align: center;
-        margin-left: -40px;
-        font-size: 95%;
+
+    footer > h3{
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #Map_Fomenu{
+
     }
 
     /*Kapcsolat Oldal*/
@@ -32,4 +43,27 @@
         width: auto;
     }
 
+    /*Ingalanok*/
+
+    aside{
+        height: max-content;
+        margin-top: 120px;
+        width: 100%;
+        margin-left: 50px;
+
+    }
+
+    section{
+        clear: both;
+        padding: 0;
+        text-align: left;
+        margin-top: 850px;
+        justify-content: flex-start;
+        margin-left: -350px;
+        width: 100%;
+    }
+
+    section > h1{
+        text-align: center;
+    }
 }
