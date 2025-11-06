@@ -1,13 +1,7 @@
-/*Itt a színpaletta amit használtam:*/
-/*https://colorhunt.co/palette/556b2f8fa31ec6d870eff5d2*/
-/* CSS stílusok */
-
-/* Üdvözlő szekció */
 .welcome-section {
     text-align: center;
     padding: 40px 20px;
     background-color: #C6D870;
-    /* Közepes zöldes háttér */
     color: #333;
 }
 
@@ -23,7 +17,6 @@
     margin: 0 auto;
 }
 
-/* Slider */
 .slider {
     max-width: 1200px;
     margin: 20px auto;
@@ -32,7 +25,6 @@
     position: relative;
     height: 400px;
     border: 2px solid #8FA31E;
-    /* Zöldes perem */
 }
 
 .slides {
@@ -89,7 +81,6 @@
     }
 }
 
-/* Kiemelt ingatlanok szekció */
 .featured-properties {
     max-width: 1200px;
     margin: 40px auto;

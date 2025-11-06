@@ -2,3 +2,17 @@ table, th, td, tr
 {
     border: 1px solid black;
 }
+
+.forma{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: #556B2F;
+}
+
+a:hover{
+    color: #8FA31E;
+}

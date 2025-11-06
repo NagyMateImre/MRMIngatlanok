@@ -2,7 +2,6 @@ nav{
     top: 80px;
 }
 
-/* Main layout */
         main {
             display: flex;
             gap: 20px;
@@ -11,10 +10,8 @@ nav{
             margin: 0 auto;
             margin-top: 120px;
             min-height: calc(100vh - 120px);
-            /* header (60px) + nav (~60px) helyet hagyunk */
         }
 
-        /* Sidebar */
         .filter-sidebar {
             width: 260px;
             background-color: #C6D870;
@@ -72,7 +69,6 @@ nav{
             background-color: #8FA31E;
         }
 
-        /* Property grid */
         .property-grid-container {
             flex: 1;
         }
@@ -179,35 +175,34 @@ nav{
             color: #A4B939;
         }
 
-        /* Carousel Stílusok */
 .simple-carousel-container {
-    position: relative; /* Fontos, hogy a gombok pozicionálhatóak legyenek hozzá képest */
+    position: relative;
     max-width: 1000px;
     margin: 40px auto;
-    overflow: hidden; /* Elrejti a dia elemeket, amik épp nincsenek fókuszban */
-    border: 3px solid #8FA31E; /* A te színsémádhoz igazítva */
+    overflow: hidden;
+    border: 3px solid #8FA31E;
 }
 
 .carousel-track-container {
-    height: 450px; /* Fix magasság a körhintának */
+    height: 450px;
 }
 
 .carousel-track {
     padding: 0;
     margin: 0;
     list-style: none;
-    transition: transform 0.5s ease-in-out; /* Animáció a diák közötti váltáshoz */
+    transition: transform 0.5s ease-in-out;
     display: flex;
 }
 
 .carousel-slide {
-    min-width: 100%; /* Minden dia kitölti a konténer teljes szélességét */
+    min-width: 100%;
     position: relative;
 }
 
 .carousel-image {
     width: 100%;
-    height: 400px; /* Kép magassága */
+    height: 400px;
     object-fit: cover;
 }
 
@@ -223,7 +218,6 @@ nav{
     font-size: 1.2em;
 }
 
-/* Gombok */
 .carousel-button {
     position: absolute;
     top: 50%;
@@ -244,12 +238,11 @@ nav{
     right: 10px;
 }
 
-/* Navigációs pontok */
 .carousel-nav {
     display: flex;
     justify-content: center;
     padding: 10px 0;
-    background-color: #C6D870; /* Színséma */
+    background-color: #C6D870;
 }
 
 .carousel-indicator {
@@ -267,4 +260,8 @@ nav{
 .carousel-indicator.current-slide {
     opacity: 1;
     background: #8FA31E;
+}
+
+a{
+    text-decoration: none;
 }

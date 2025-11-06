@@ -2,16 +2,13 @@ nav{
     top: 80px;
 }
 
-        /* Main layout - egyszerűsítve, szűrő nélkül */
         main {
             max-width: 1400px;
             margin: 0 auto;
             padding: 20px;
             margin-top: 120px;
-            /* header (60px) + nav (~60px) helyet hagyunk */
         }
 
-        /* Munkatársak grid - finomhangolt megjelenés, görgethető tartalom */
         .team-grid-container {
             flex: 1;
         }
@@ -28,7 +25,6 @@ nav{
         .team-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-            /* nagyobb kártyák az olvashatóság érdekében */
             gap: 25px;
         }
 
@@ -52,7 +48,6 @@ nav{
         .team-card img {
             width: 100%;
             height: 200px;
-            /* nagyobb kép a szebb megjelenésért */
             object-fit: cover;
             border-bottom: 2px solid #8FA31E;
         }
@@ -64,12 +59,9 @@ nav{
             font-weight: bold;
         }
 
-        /* Új: görgethető szövegdoboz a hosszú bemutatkozásokhoz */
         .team-card .description {
             max-height: 200px;
-            /* fix magasság a konzisztens kártyákhoz */
             overflow-y: auto;
-            /* görgethető, ha a szöveg hosszú */
             padding: 0 15px;
             font-size: 14px;
             line-height: 1.6;
@@ -78,7 +70,6 @@ nav{
             margin: 0 10px 15px;
         }
 
-        /* Új: animáció a kártyák betöltéséhez */
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -95,7 +86,6 @@ nav{
             animation: fadeIn 0.5s ease-out forwards;
         }
 
-        /* Reszponzív design finomhangolás */
         @media (max-width: 768px) {
             .team-grid {
                 grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));

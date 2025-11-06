@@ -79,3 +79,8 @@ table{
 td{
     padding: 0 10px 0 10px;
 }
+
+.szamAdat{
+    color: #A4B939;
+    font-weight: bold;
+}
