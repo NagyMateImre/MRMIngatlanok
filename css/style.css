@@ -10,7 +10,7 @@ body {
  /* Világos zöldes háttér */
  color: #333;
  min-height: 100%;
- display: flex;
+ 
  flex-direction: column;
 }
 
@@ -57,13 +57,13 @@ main {
 }
 
 nav {
-    top: 80px;
+    position: relative;
     left: 0;
     width: 100%;
     background-color: #8FA31E;
     color: #EFF5D2;
     padding: 10px 0;
-    z-index: 10001;
+    z-index: 999;
 }
 
 
