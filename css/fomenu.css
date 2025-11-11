@@ -25,6 +25,7 @@
     position: relative;
     height: 400px;
     border: 2px solid #8FA31E;
+    border-radius: 25px;
 }
 
 .slides {
@@ -49,6 +50,18 @@
     margin: 10px 0;
     font-size: 18px;
     color: #556B2F;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.slide a {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: #556B2F;
+    transition: all ease-in-out 0.35s;
+    width: fit-content;
+}
+
+.slide a:hover{
+    font-size: 1.1em;
 }
 
 @keyframes slide {

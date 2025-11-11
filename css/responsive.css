@@ -37,6 +37,10 @@
 
     }
 
+    .contact-info{
+        font-size: 0.75em;
+    }
+
     /*Kapcsolat Oldal*/
 
     .container{
@@ -47,7 +51,6 @@
 
     aside{
         height: max-content;
-        margin-top: 120px;
         width: 100%;
         margin-left: 50px;
 
@@ -57,10 +60,8 @@
         clear: both;
         padding: 0;
         text-align: left;
-        margin-top: 850px;
         justify-content: flex-start;
-        margin-left: -350px;
-        width: 100%;
+        width: 90%;
     }
 
     section > h1{

@@ -8,6 +8,15 @@ table, th, td, tr
     margin-right: 20px;
 }
 
+.forma p{
+    text-indent: 20px;
+}
+
+.forma h1{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+}
+
 a{
     text-decoration: none;
     color: #556B2F;
