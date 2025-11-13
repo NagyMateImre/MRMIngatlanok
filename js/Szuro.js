@@ -131,7 +131,7 @@ form.addEventListener('submit', (event) => {
             show = false
         }
 
-        card.style.display = show ? "block" : "none";
+        card.style.opacity = show ? "100%" : "50%";
     });
 });
 
@@ -148,87 +148,13 @@ clearBtn.addEventListener('click', (e) => {
     });
 });
 
-    document.addEventListener('DOMContentLoaded', () => {
-        const track = document.querySelector('.carousel-track');
-        const slides = Array.from(track.children);
-        const nextButton = document.querySelector('.carousel-button.next');
-        const prevButton = document.querySelector('.carousel-button.prev');
-        const nav = document.querySelector('.carousel-nav');
-        const indicators = Array.from(nav.children);
+const Mname = document.getElementById('modalName');
+const MPrice = document.getElementById('modalPrice');
+const MT = document.getElementById('modalT');
+const Mroom = document.getElementById('modalRoom');
+const MD = document.getElementById('modalD');
+const modal = document.getElementById('modal');
 
-        // Meghatározza a dia szélességét
-        const slideWidth = slides[0].getBoundingClientRect().width;
-
-        // A diák elrendezése egymás mellé (kezdeti pozíció beállítása)
-        const setSlidePosition = (slide, index) => {
-            slide.style.left = slideWidth * index + 'px';
-        };
-        slides.forEach(setSlidePosition);
-
-        // Funkció a diához ugráshoz
-        const moveToSlide = (track, currentSlide, targetSlide) => {
-            // A diák eltolása
-            track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
-            
-            // Osztályok frissítése a láthatósághoz
-            currentSlide.classList.remove('current-slide');
-            targetSlide.classList.add('current-slide');
-        };
-
-        // Funkció a navigációs pontok frissítéséhez
-        const updateIndicators = (currentIndicator, targetIndicator) => {
-            currentIndicator.classList.remove('current-slide');
-            targetIndicator.classList.add('current-slide');
-        };
-
-        // KATTINTÁS a Jobb gombra
-        nextButton.addEventListener('click', () => {
-            const currentSlide = track.querySelector('.current-slide');
-            // A következő dia a jelenlegi utáni elem
-            const nextSlide = currentSlide.nextElementSibling || slides[0]; // Vissza az elsőre, ha a végén vagyunk
-            
-            const currentIndicator = nav.querySelector('.current-slide');
-            const nextIndicator = currentIndicator.nextElementSibling || indicators[0];
-
-            moveToSlide(track, currentSlide, nextSlide);
-            updateIndicators(currentIndicator, nextIndicator);
-        });
-
-        // KATTINTÁS a Bal gombra
-        prevButton.addEventListener('click', () => {
-            const currentSlide = track.querySelector('.current-slide');
-            // Az előző dia a jelenlegi előtti elem
-            const prevSlide = currentSlide.previousElementSibling || slides[slides.length - 1]; // Az utolsóra, ha az elején vagyunk
-            
-            const currentIndicator = nav.querySelector('.current-slide');
-            const prevIndicator = currentIndicator.previousElementSibling || indicators[indicators.length - 1];
-
-            moveToSlide(track, currentSlide, prevSlide);
-            updateIndicators(currentIndicator, prevIndicator);
-        });
-        
-        // KATTINTÁS a Navigációs pontokra
-        nav.addEventListener('click', e => {
-            const targetIndicator = e.target.closest('button');
-            
-            if (!targetIndicator || !targetIndicator.classList.contains('carousel-indicator')) return; // Ha nem gombra kattintott
-
-            const currentSlide = track.querySelector('.current-slide');
-            const currentIndicator = nav.querySelector('.current-slide');
-            
-            const targetIndex = indicators.findIndex(indicator => indicator === targetIndicator);
-            const targetSlide = slides[targetIndex];
-
-            moveToSlide(track, currentSlide, targetSlide);
-            updateIndicators(currentIndicator, targetIndicator);
-        });
-
-        // Eseménykezelő a reszponzivitás javítására: újrapozicionálás átméretezéskor
-        window.addEventListener('resize', () => {
-            slides.forEach(setSlidePosition);
-            // Áthelyezzük a track-et a megfelelő helyre az új szélesség alapján
-            const currentSlide = track.querySelector('.current-slide');
-            track.style.transform = 'translateX(-' + currentSlide.style.left + ')';
-        });
-
-    });
+function Active(){
+    Mname.innerText = localStorage.getItem("Tomb");
+}
