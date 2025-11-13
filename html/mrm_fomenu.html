@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/fomenu.css">    
+    <link rel="stylesheet" href="../css/fomenu.css">
+    <link rel="stylesheet" href="../css/footer.css">    
     <link rel="stylesheet" href="../css/responsive.css">
     <link rel="icon" type="image/png" href="../img/MRM_Logo.png">
     <title>MRM Ingatlan</title>
@@ -32,15 +33,9 @@
         <nav>
             <ul>
                 <li><a href="./mrm_fomenu.html">Főoldal</a></li>
-                <li><a href="./mrm_ingatlanok.html">Ingatlanok</a></li>
-                <li>
-                    <a href="#">Állami támogatások</a>
-                    <ul>
-                        <li><a href="./mrm_ott.html">Otthonfelújítási támogatás tájékoztató</a></li>
-                        <li><a href="./mrm_csok.html">Mindent a CSOK-ról</a></li>
-                    </ul>
-                </li>
                 <li><a href="./mrm_bemutat.html">Bemutatkozás</a></li>
+                <li><a href="./mrm_ingatlanok.html">Ingatlanok</a></li>
+                <li><a href="./mrm_ertekesitok.html">Értékesítők</a></li>
                 <li>
                     <a href="#">Szolgáltatásaink</a>
                     <ul>
@@ -52,7 +47,13 @@
                         <li><a href="./mrm_hoterkepes-vizsgalat.html">Hőtérképes vizsgálat</a></li>
                     </ul>
                 </li>
-                <li><a href="./mrm_ertekesitok.html">Értékesítők</a></li>
+                <li>
+                    <a href="#">Állami támogatások</a>
+                    <ul>
+                        <li><a href="./mrm_ott.html">Otthonfelújítási támogatás tájékoztató</a></li>
+                        <li><a href="./mrm_csok.html">Mindent a CSOK-ról</a></li>
+                    </ul>
+                </li>
                 <li><a href="./mrm_adoilletek.html">ADÓ, ILLETÉK</a></li>
                 <li><a href="./mrm_kapcsolat.html">Kapcsolat</a></li>
             </ul>
@@ -114,20 +115,11 @@
             </div>
         </section>
     </main>
-    <svg style="margin-top: -120px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#556B2F" fill-opacity="1" d="M0,96L24,122.7C48,149,96,203,144,186.7C192,171,240,85,288,80C336,75,384,149,432,176C480,203,528,181,576,165.3C624,149,672,139,720,149.3C768,160,816,192,864,176C912,160,960,96,1008,69.3C1056,43,1104,53,1152,85.3C1200,117,1248,171,1296,186.7C1344,203,1392,181,1416,170.7L1440,160L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z"></path>
+    <svg style="margin-top: -120px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" id="svg">
+        <path fill="#556B2F" fill-opacity="1" d="M0,128L26.7,122.7C53.3,117,107,107,160,133.3C213.3,160,267,224,320,240C373.3,256,427,224,480,229.3C533.3,235,587,277,640,282.7C693.3,288,747,256,800,218.7C853.3,181,907,139,960,144C1013.3,149,1067,203,1120,186.7C1173.3,171,1227,85,1280,74.7C1333.3,64,1387,128,1413,160L1440,192L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path>
     </svg>
     <!-- Footer / Mini bemutatkozás -->
     <footer>
-        <h3>Mi vagyunk az MRM Ingatlan. Segítünk eladni, venni, értékelni és tanácsot adni ingatlanügyekben.</h3>
-        <div class="media">
-            <div class="FooterDiv1">
-                <a href="https://www.instagram.com/miskolc_putri/"><img id="InstagramLogo" src="../img/InstagramLogo.png" alt="" width="120px"></a>
-            </div>
-            <div class="FooterDiv2">
-                <a href=""><img id="FacebookLogo" src="../img/FacebookLogo.png" alt="" width="130px"></a>
-            </div>
-        </div>
         <div class="informations">
             <ul style="list-style: none;" class="Description">
                 <h1>Rólunk</h1>
@@ -138,7 +130,16 @@
                 <li><a href="../html/mrm_adoilletek.html">Pénzügy</a></li>
             </ul>
         </div>
-        <div id="Map_Fomenu">
+        <h3>Mi vagyunk az MRM Ingatlan. Segítünk eladni, venni, értékelni és tanácsot adni ingatlanügyekben.</h3>
+        <div class="media">
+            <div class="FooterDiv1">
+                <a href="https://www.instagram.com/miskolc_putri/"><img id="InstagramLogo" src="../img/InstagramLogo.png" alt="" width="120px"></a>
+            </div>
+            <div class="FooterDiv2">
+                <a href=""><img id="FacebookLogo" src="../img/FacebookLogo.png" alt="" width="130px"></a>
+            </div>
+        </div>
+        <div id="Map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d102755.00627210893!2d20.663539632926017!3d48.07017904143665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47409fe48c01588b%3A0xdc6303e601794631!2sMiskolci%20SZC%20Kand%C3%B3%20K%C3%A1lm%C3%A1n%20Informatikai%20Technikum!5e1!3m2!1shu!2shu!4v1758740664391!5m2!1shu!2shu" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </footer>
