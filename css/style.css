@@ -11,6 +11,10 @@ body {
  flex-direction: column;
 }
 
+.fixFooter{
+    display: flex;
+}
+
 header {
  position: fixed;
  top: 0;
@@ -122,18 +126,6 @@ nav ul li ul li a:hover {
 .no-link:hover {
  background-color: #556B2F;
  border: 1px solid #C6D870;
-}
-
-footer {
- background-color: #556B2F;
- color: #EFF5D2;
- text-align: center;
- padding: 20px;
- flex-shrink: 0;
-}
-
-footer p {
- margin: 0;
 }
 
 ::-webkit-scrollbar {

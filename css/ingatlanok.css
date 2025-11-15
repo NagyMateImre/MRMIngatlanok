@@ -1,3 +1,12 @@
+body {
+ margin: 0;
+ font-family: Arial, sans-serif;
+ background-color: #EFF5D2;
+ color: #333;
+ min-height: 100%;
+ flex-direction: column;
+}
+
 nav{
     top: 80px;
 }
