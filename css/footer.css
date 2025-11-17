@@ -45,6 +45,7 @@ footer {
     align-items: flex-end;
     margin-right: 7.75%;
     gap: 15px; 
+    margin-bottom: 6px;
 }
 
 .Description {
@@ -69,6 +70,10 @@ footer {
 #XLogo,#InstagramLogo,#FacebookLogo {
     width: 64px;
     height: 64px;
+}
+
+#XLogo:hover,#InstagramLogo:hover,#FacebookLogo:hover{
+    transform: rotate(22deg);
 }
 
 
