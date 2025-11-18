@@ -16,6 +16,10 @@
         margin-left: -25px;
     }
 
+    nav{
+        margin-top: -230px;
+    }
+
     nav ul{
         display: flex;
         flex-wrap: wrap;
@@ -63,11 +67,35 @@
         text-align: left;
         justify-content: flex-start;
         width: 90%;
+    }
+
+    .property-grid-container{
         margin-left: -350px;
         margin-top: 735px;
     }
 
+    .slider{
+        margin-top: 50px;
+    }
+
     section > h1{
         text-align: center;
+    }
+
+    iframe{
+        height: 375px;
+        width: 375px;
+    }
+
+    #Container{
+        width: 100%;
+    }
+
+    #Header_Contact{
+        line-height: 14px;
+    }
+
+    form{
+        width: fit-content;
     }
 }

@@ -16,7 +16,7 @@ body {
 }
 
 header {
- position: fixed;
+ position: sticky;
  top: 0;
  left: 0;
  width: 100%;
@@ -55,6 +55,7 @@ main {
 nav {
     position: relative;
     left: 0;
+    margin-top: -80px;
     width: 100%;
     background-color: #8FA31E;
     color: #EFF5D2;
