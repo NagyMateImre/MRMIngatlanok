@@ -17,11 +17,12 @@ table, th, td, tr
     font-weight: bolder;
 }
 
-a{
+.links{
     text-decoration: none;
     color: #556B2F;
+    font-weight: bolder;
 }
 
-a:hover{
+.links:hover{
     color: #8FA31E;
 }

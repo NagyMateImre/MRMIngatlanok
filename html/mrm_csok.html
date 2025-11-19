@@ -4,426 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="img/logo.png">
-    <title>MRM Ingatlan</title>
-    <style>
-        /*Itt a színpaletta amit használtam:*/
-        /*https://colorhunt.co/palette/556b2f8fa31ec6d870eff5d2*/
-        /* CSS stílusok */
-
-        /* Alapbeállítások */
-        html {
-            height: 100%;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #EFF5D2;
-            /* Világos zöldes háttér */
-            color: #333;
-            min-height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Rögzített fejléc */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #556B2F;
-            /* Sötét zöldes-fekete */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-            height: 60px;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #EFF5D2;
-            /* Világos zöldes szöveg */
-            /* Itt rakd be a logó képet: <img src="logo.png" alt="MRM Logo" style="height: 50px;"> */
-            /* Jelenleg placeholder szöveg */
-            content: "MRM";
-        }
-
-        .contact-info {
-            text-align: right;
-            color: #C6D870;
-            margin-right: 30px;
-            /* Közepes zöldes árnyalat */
-        }
-
-        .contact-info p {
-            margin: 5px 0;
-        }
-
-        /* Tartalom */
-        main {
-            flex: 1 0 auto;
-            padding-top: 80px;
-        }
-
-        /* Navigációs bár */
-        nav {
-            background-color: #8FA31E;
-            /* Zöldes árnyalat */
-            color: #EFF5D2;
-            padding: 10px 0;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-
-        nav ul li {
-            position: relative;
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: #EFF5D2;
-            text-decoration: none;
-            padding: 10px;
-            display: block;
-            transition: border 0.3s, background-color 0.3s;
-        }
-
-        nav ul li:hover>a {
-            background-color: #556B2F;
-            /* Sötét zöldes-fekete hover */
-            border: 1px solid #C6D870;
-            /* Közepes zöld perem */
-        }
-
-        /* Dropdown menük */
-        nav ul li ul {
-            display: none;
-            position: absolute;
-            background-color: #8FA31E;
-            min-width: 200px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-
-        nav ul li:hover>ul {
-            display: block;
-        }
-
-        nav ul li ul li {
-            margin: 0;
-        }
-
-        nav ul li ul li a {
-            padding: 10px 15px;
-        }
-
-        nav ul li ul li a:hover {
-            border: 1px solid #C6D870;
-            background-color: #556B2F;
-        }
-
-        /* Üdvözlő szekció */
-        .welcome-section {
-            text-align: center;
-            padding: 40px 20px;
-            background-color: #C6D870;
-            /* Közepes zöldes háttér */
-            color: #333;
-        }
-
-        .welcome-section h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            color: #556B2F;
-        }
-
-        .welcome-section p {
-            font-size: 18px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        /* Slider */
-        .slider {
-            max-width: 1200px;
-            margin: 20px auto;
-            overflow: hidden;
-            position: relative;
-            height: 400px;
-            border: 2px solid #8FA31E;
-            /* Zöldes perem */
-        }
-
-        .slides {
-            display: flex;
-            width: 300%;
-            animation: slide 9s infinite;
-        }
-
-        .slide {
-            width: 33.33%;
-            text-align: center;
-            transition: transform 0.5s ease;
-        }
-
-        .slide img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-        }
-
-        .slide p {
-            margin: 10px 0;
-            font-size: 18px;
-            color: #556B2F;
-        }
-
-        @keyframes slide {
-            0% {
-                transform: translateX(0);
-            }
-
-            33% {
-                transform: translateX(0);
-            }
-
-            33.1% {
-                transform: translateX(-33.33%);
-            }
-
-            66% {
-                transform: translateX(-33.33%);
-            }
-
-            66.1% {
-                transform: translateX(-66.66%);
-            }
-
-            99% {
-                transform: translateX(-66.66%);
-            }
-
-            100% {
-                transform: translateX(0);
-            }
-        }
-
-        /* Kiemelt ingatlanok szekció */
-        .featured-properties {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .featured-properties h2 {
-            text-align: center;
-            color: #556B2F;
-            margin-bottom: 20px;
-        }
-
-        .property-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .property-card {
-            background-color: #fff;
-            border: 1px solid #C6D870;
-            border-radius: 5px;
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
-
-        .property-card:hover {
-            transform: scale(1.05);
-        }
-
-        .property-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .property-card h3 {
-            margin: 10px;
-            color: #556B2F;
-        }
-
-        .property-card p {
-            margin: 10px;
-            color: #333;
-        }
-
-        /* Footer / Bemutatkozás */
-        footer {
-            background-color: #556B2F;
-            color: #EFF5D2;
-            text-align: center;
-            padding: 20px;
-            flex-shrink: 0;
-        }
-
-        footer p {
-            margin: 0;
-        }
-
-        ::-webkit-scrollbar {
-        width: 12px;
-        }
-
-        ::-webkit-scrollbar-track {
-        background: #556B2F;
-        }
-       
-        ::-webkit-scrollbar-thumb {
-        background: #8FA31E;
-        border: 1px solid #556B2F;
-        border-radius: 10px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-        border: 1px solid #556B2F;
-        background: #A4B939;
-        }
-    </style>
-</head>
-
-<body>
-
-    <!-- Rögzített fejléc -->
-    <header>
-        <div class="logo">
-            <img src="img/MRM_Logo.png" alt="MRM Logo" style="height: 100px;">
-        </div>
-        <div class="contact-info">
-            <p>Email: info@mrmingatlan.hu</p>
-            <p>Telefon: +36 123 4567</p>
-        </div>
-    </header>
-
-    <main>
-        <!-- Navigációs bár -->
-    <nav>
-        <ul>
-            <li><a href="mrm_fomenu.html">Főoldal</a></li>
-            <li><a href="mrm_ingatlanok.html">Ingatlanok</a></li>
-            <li>
-                <a href="mrm_alltam.html">Állami támogatások</a>
-                <ul>
-                    <li><a href="#">Otthonfelújítási támogatás tájékoztató</a></li>
-                    <li><a href="#">Mindent a CSOK-ról</a></li>
-                </ul>
-            </li>
-            <li><a href="mrm_bemutat.html">Bemutatkozás</a></li>
-            <li>
-                <a href="mrm_szolg.html">Szolgáltatásaink</a>
-                <ul>
-                    <li><a href="#">Ingatlan közvetítés</a></li>
-                    <li><a href="#">Értékbecslés</a></li>
-                    <li><a href="#">Alaprajz készítés</a></li>
-                    <li><a href="#">Energetikai tanúsítvány készítés</a></li>
-                    <li><a href="#">Ingatlannal kapcsolatos jogi tanácsadás és ügyintézés</a></li>
-                    <li><a href="#">Hőtérképes vizsgálat</a></li>
-                </ul>
-            </li>
-            <li><a href="mrm_ado.html">ADÓ, ILLETÉK</a></li>
-            <li><a href="mrm_kapcs.html">Kapcsolat</a></li>
-        </ul>
-    </nav>
-
-        <!-- Üdvözlő szekció -->
-        <section class="welcome-section">
-            <h1>Üdvözöljük az MRM Ingatlan Oldalán!</h1>
-            <p>Mi vagyunk a megbízható partner az ingatlanpiacon, segítünk megtalálni álmai otthonát vagy eladni
-                ingatlanát a legjobb áron. Széleskörű szolgáltatásainkkal és szakértelmünkkel az Ön oldalán állunk!</p>
-        </section>
-
-        <!-- Slider -->
-        <section class="slider">
-            <div class="slides">
-                <div class="slide">
-                    <img src="https://www.otthonszuletik.hu/wp-content/uploads/2023/03/minimalitsa-lakas.jpg"
-                        alt="Ingatlan 1">
-                    <p>Gyönyörű lakás Budapest belvárosában, 2 hálószobával és modern konyhával.</p>
-                </div>
-                <div class="slide">
-                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6" alt="Ingatlan 2">
-                    <p>Családi ház kerttel, vidéki környezetben, ideális gyermekes családoknak.</p>
-                </div>
-                <div class="slide">
-                    <img src="https://tse4.mm.bing.net/th/id/OIP.tZO533icc_hv_JtDvIus9wHaEo?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3"
-                        alt="Ingatlan 3">
-                    <p>Luxus apartman tengerre néző kilátással, teljes felszereltséggel.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Kiemelt ingatlanok -->
-        <section class="featured-properties">
-            <h2>Kiemelt Ingatlanaink</h2>
-            <div class="property-grid">
-                <div class="property-card">
-                    <img src="https://www.otthonszuletik.hu/wp-content/uploads/2023/03/minimalitsa-lakas.jpg"
-                        alt="Ingatlan 1">
-                    <h3>Belvárosi Lakás</h3>
-                    <p>Modern, 2 hálószobás lakás Budapest szívében, azonnal költözhető.</p>
-                </div>
-                <div class="property-card">
-                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6" alt="Ingatlan 2">
-                    <h3>Vidéki Családi Ház</h3>
-                    <p>Tágas családi ház nagy kerttel, tökéletes nyugalomra vágyóknak.</p>
-                </div>
-                <div class="property-card">
-                    <img src="https://tse4.mm.bing.net/th/id/OIP.tZO533icc_hv_JtDvIus9wHaEo?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3"
-                        alt="Ingatlan 3">
-                    <h3>Luxus Apartman</h3>
-                    <p>Tengerparti kilátással rendelkező exkluzív apartman.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer / Mini bemutatkozás -->
-    <footer>
-        <p>Mi vagyunk az MRM Ingatlan, szakértők az ingatlanpiacon. Segítünk eladni, venni, értékelni és tanácsot adni
-            ingatlanügyekben. Forduljon hozzánk bizalommal!</p>
-    </footer>
-
-</body>
-
-</html>
-<!DOCTYPE html>
-<html lang="hu">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/adatok.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/responsive.css">
-    <link rel="icon" type="image/png" href="img/logo.png">
-    <title>MRM Ingatlan</title>
-  
+    <link rel="icon" type="image/png" href="../img/MRM_Logo.png">
+    <title>MRM Ingatlan - CSOK</title>
 </head>
 
 <body>
 
-    <!-- Rögzített fejléc -->
     <header>
         <div class="logo">
-            <img src="img/MRM_Logo.png" alt="MRM Logo" style="height: 100px;">
+            <img src="../img/MRM_Logo.png" alt="MRM Logo" style="height: 100px;">
+        </div>
+        <div class="MRM">
+            <h1 style="color:#8FA31E;"><b>M</b>indenre <b>R</b>endezett <b>M</b>egoldás</h1>
         </div>
         <div class="contact-info">
             <p>Email: info@mrmingatlan.hu</p>
@@ -432,94 +28,325 @@
     </header>
 
     <main>
-        <!-- Navigációs bár -->
         <nav>
             <ul>
-                <li><a href="./mrm_fomenu.html">Főoldal</a></li>
-                <li><a href="./mrm_bemutat.html">Bemutatkozás</a></li>
-                <li><a href="./mrm_ingatlanok.html">Ingatlanok</a></li>
+                <li><a href="mrm_fomenu.html">Főoldal</a></li>
+                <li><a href="mrm_bemutat.html">Bemutatkozás</a></li>
+                <li><a href="mrm_ingatlanok.html">Ingatlanok</a></li>
                 <li><a href="./mrm_ertekesitok.html">Értékesítők</a></li>
                 <li>
                     <a href="#">Szolgáltatásaink</a>
                     <ul>
-                        <li><a href="./mrm_ingatlan-kozvetites.html">Ingatlan közvetítés</a></li>
-                        <li><a href="./mrm_ertekbecsles.html">Értékbecslés</a></li>
-                        <li><a href="./mrm_alaprajz-keszites.html">Alaprajz készítés</a></li>
-                        <li><a href="./mrm_energetikai-tanusitvany-keszites.html">Energetikai tanúsítvány készítés</a></li>
-                        <li><a href="./mrm_ikjtu.html">Ingatlannal kapcsolatos jogi tanácsadás és ügyintézés</a></li>
-                        <li><a href="./mrm_hoterkepes-vizsgalat.html">Hőtérképes vizsgálat</a></li>
+                        <li><a href="mrm_ingatlan-kozvetites.html">Ingatlan közvetítés</a></li>
+                        <li><a href="mrm_ertekbecsles">Értékbecslés</a></li>
+                        <li><a href="mrm_alaprajz-keszites.html">Alaprajz készítés</a></li>
+                        <li><a href="mrm_energetikai-tanusitvany-keszites.html">Energetikai tanúsítvány készítés</a>
+                        </li>
+                        <li><a href="mrm_ikjtu.html">Ingatlannal kapcsolatos jogi tanácsadás és ügyintézés</a></li>
+                        <li><a href="mrm_hoterkepes-vizsgalat.html">Hőtérképes vizsgálat</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#">Állami támogatások</a>
+                    <span class="no-link">Állami támogatások</span>
                     <ul>
-                        <li><a href="./mrm_ott.html">Otthonfelújítási támogatás tájékoztató</a></li>
-                        <li><a href="./mrm_csok.html">Mindent a CSOK-ról</a></li>
+                        <li><a href="mrm_ott.html">Otthonfelújítási támogatás tájékoztató</a></li>
+                        <li><a href="mrm_csok.html">Mindent a CSOK-ról</a></li>
                     </ul>
                 </li>
-                <li><a href="./mrm_adoilletek.html">ADÓ, ILLETÉK</a></li>
-                <li><a href="./mrm_kapcsolat.html">Kapcsolat</a></li>
+                <li><a href="mrm_adoilletek.html">ADÓ, ILLETÉK</a></li>
+                <li><a href="mrm_kapcsolat.html">Kapcsolat</a></li>
             </ul>
         </nav>
+        <div class="forma">
+            <h1 style="text-align:center">Tájékoztató</h1>
 
-        <!-- Üdvözlő szekció -->
-        <section class="welcome-section">
-            <h1>Üdvözöljük az MRM Ingatlan Oldalán!</h1>
-            <p>Mi vagyunk a megbízható partner az ingatlanpiacon, segítünk megtalálni álmai otthonát vagy eladni
-                ingatlanát a legjobb áron. Széleskörű szolgáltatásainkkal és szakértelmünkkel az Ön oldalán állunk!</p>
-        </section>
+                <h3 style="text-align:center">a gyermeket nevelő családok otthonfelújítási támogatásának igénybevételéhez</h3>
 
-        <!-- Slider -->
-        <section class="slider">
-            <div class="slides">
-                <div class="slide">
-                    <img src="https://www.otthonszuletik.hu/wp-content/uploads/2023/03/minimalitsa-lakas.jpg"
-                        alt="Ingatlan 1">
-                    <p>Gyönyörű lakás Budapest belvárosában, 2 hálószobával és modern konyhával.</p>
-                </div>
-                <div class="slide">
-                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6" alt="Ingatlan 2">
-                    <p>Családi ház kerttel, vidéki környezetben, ideális gyermekes családoknak.</p>
-                </div>
-                <div class="slide">
-                    <img src="https://tse4.mm.bing.net/th/id/OIP.tZO533icc_hv_JtDvIus9wHaEo?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3"
-                        alt="Ingatlan 3">
-                    <p>Luxus apartman tengerre néző kilátással, teljes felszereltséggel.</p>
-                </div>
-            </div>
-        </section>
+                <p style="margin:left">A Kormány a gyermeket nevelő családok otthon-felújítási támogatásáról szóló 518/2020. (XI. 25.)
+                Kormányrendeletben (a továbbiakban: Rendelet) foglaltak alapján igényelhető egyszeri támogatással lehetővé
+                teszi, hogy a gyermeket nevelő családok lakhatási körülményeiken javítsanak. Ehhez a Magyar Államkincstár (a
+                továbbiakban: Kincstár) közreműködésével a Rendeletben meghatározott feltételekkel a központi
+                költségvetésből vissza nem térítendő lakáscélú állami támogatásként otthon-felújítási támogatás vehető
+                igénybe 2021. január 1-jétől 2022. december 31-ig.</p>
 
-        <!-- Kiemelt ingatlanok -->
-        <section class="featured-properties">
-            <h2>Kiemelt Ingatlanaink</h2>
-            <div class="property-grid">
-                <div class="property-card">
-                    <img src="https://www.otthonszuletik.hu/wp-content/uploads/2023/03/minimalitsa-lakas.jpg"
-                        alt="Ingatlan 1">
-                    <h3>Belvárosi Lakás</h3>
-                    <p>Modern, 2 hálószobás lakás Budapest szívében, azonnal költözhető.</p>
-                </div>
-                <div class="property-card">
-                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6" alt="Ingatlan 2">
-                    <h3>Vidéki Családi Ház</h3>
-                    <p>Tágas családi ház nagy kerttel, tökéletes nyugalomra vágyóknak.</p>
-                </div>
-                <div class="property-card">
-                    <img src="https://tse4.mm.bing.net/th/id/OIP.tZO533icc_hv_JtDvIus9wHaEo?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3"
-                        alt="Ingatlan 3">
-                    <h3>Luxus Apartman</h3>
-                    <p>Tengerparti kilátással rendelkező exkluzív apartman.</p>
-                </div>
-            </div>
-        </section>
+                <h3>Hol lehet tájékozódni a Rendelet tartalmát illetően?</h3>
+
+                <p style="margin:left" >A Rendelet letölthető PDF formátumban elérhető a Kincstár honlapján (Főoldal > Lakossági ügyfelek >
+                Otthonfelújítási támogatás >) az Általános tájékoztató menüpontban és az www.uj.jogtar.hu honlapon is. A
+                Rendelet január 1-jétől hatályos szövegét az otthonfelújítási hitel bevezetése érdekében egyes
+                kormányrendeletek módosításáról szóló 641/2020. (XII. 22.) Korm. rendelet több részletben módosította,
+                illetve kiegészítette a használt lakás vásárlásához, bővítéséhez igényelhető családi otthonteremtési
+                kedvezményről szóló 17/2016. (II. 10.) Korm. rendeletet az otthonfelújításhoz kapcsolódó kamattámogatásos
+                kölcsön felvételének lehetőségével. Ezek a rendeletek is megtekinthetők a már jelzett jogszabálykereső
+                honlapon.</p>
+
+                <h3>Hogyan igényelhető a támogatás?</h3>
+
+                <p style="margin:left">A támogatási kérelem 2021. január 1-je után az alábbi módokon nyújtható be a Kincstárhoz:</p>
+
+                <p style="margin:left">elektronikus úton ügyfélkapus bejelentkezést követően a SZÜF felületén (TULAJDON > Ingatlan menüpont alatt)
+                elérhető elektronikus nyomtatvány („Kérelem gyermeket nevelő családok otthonfelújítási támogatására”)
+                kitöltésével, a szükséges adatok megadásával és az előírt dokumentumok, valamint nyilatkozatok
+                becsatolásával;
+                A Kincstár honlapjáról – Főoldal > Lakossági ügyfelek > Otthonfelújítási támogatás > Kérelem benyújtásának
+                nyomtatványai menüpontból – letöltött és kitöltött kérelem, illetve nyilatkozatok eredeti példányai,
+                valamint ez előírt dokumentumok másolatainak postai úton történő megküldésével (cím: Magyar Államkincstár,
+                1938 Budapest);
+                Személyesen bármely kormányablakban a Kincstár honlapjáról letöltött és kitöltött kérelem, illetve
+                nyilatkozatok eredeti példányai, valamint ez előírt dokumentumok másolatainak leadásával.
+                Az elektronikusan kitölthető és a papír alapon benyújtható formanyomtatványok a Kincstár honlapján
+                (http://www.allamkincstar.gov.hu/hu/lakossagi-ugyfelek/kerelem-benyujtasanak-nyomtatvanyai) 2021. január
+                1-jétől elérhetőek.</p>
+
+
+
+            <h3>Ki igényelheti a támogatást?</h3> 
+
+                <p style="margin:left">A támogatást a legalább egy gyermeket váró vagy nevelő személy, mint igénylő igényelheti, vagy az azonos
+                lakóhellyel rendelkező házastársak vagy élettársak közösen, együttes igénylőként igényelhetik.</p>
+
+                <p style="margin:left">Igénylő lehet az a nagykorú, cselekvőképes természetes személy, aki magyar állampolgár vagy a magyar állampolgárságról szóló
+                törvény alapján magyar állampolgárnak tekintendő,
+                nagykorú, cselekvőképes természetes személy, aki a szabad mozgás és tartózkodás jogával rendelkező személyek
+                beutazásáról és tartózkodásáról szóló törvény hatálya alá tartozó, a szabad mozgás és a három hónapot
+                meghaladó tartózkodás jogát Magyarország területén gyakorolja.</p>
+
+
+                <h3>Hány alkalommal vehető igénybe a támogatás?</h3>
+
+                <p style="margin:left">A támogatás ugyanazon igénylő által – együttes igénylők esetében is – csak egyetlen alkalommal vehető
+                igénybe. Ha a kérelem elutasításra kerül, akkor a jogszabályban nyitva álló időszakban 2022. december 31-éig
+                az utolsó felújítási számla kiegyenlítését követő 60 napon belül ismételten igényelhető a támogatás.</p>
+
+                <h3>Milyen ingatlanra igényelhető a támogatás?</h3>
+
+                <p style="margin:left">Magyarország területén fekvő, az ingatlan-nyilvántartásban lakás vagy lakóház fő rendeltetés szerinti
+                jelleggel nyilvántartott ingatlanok, valamint tanya, vagy birtokközpont jogi jelleggel nyilvántartott
+                ingatlan lakáscélú épületeinek (a továbbiakban: lakás) felújítására igényelhető a támogatás.</p>
+
+                <h3>Melyek az igénylés alapvető feltételei?</h3>
+
+                <p style="margin:left">Az igénylés feltétele, hogy az igénylő/együttes igénylők saját, vér szerinti vagy örökbefogadott gyermeket
+                neveljenek háztartásukban és valamennyien legalább egy éve a felújítással érintett lakásban rendelkezzenek
+                lakóhellyel, amelyben az igénylő vagy igénylők, valamint velük együtt élő kiskorú gyermekeik együttes
+                tulajdoni hányada érje el legalább az 50%-ot. Lakóhelynek a lakcímet igazoló hatósági igazolványon
+                lakóhelyként feltüntetett cím fogadható el, a tartózkodási hely címén lévő lakás felújítására a támogatás
+                nem vehető igénybe.</p>
+
+                <p style="margin:left"> fenti – egy éves lakóhelyre vonatkozó – kitétel alól kivételt képez a magzat, illetve az egy évnél nem
+                régebben született gyermek, valamint az az eset, amikor az érintett lakás tulajdonjogának megszerzésére,
+                vagy az igénylő (együttes igényléskor házastársa vagy élettársa), illetve kiskorú gyermekei tulajdonában
+                lévő telken felépült lakás ingatlan-nyilvántartási bejegyzésére a támogatási kérelem benyújtását megelőző
+                egy éven belül került sor.</p>
+
+                <h3>Melyek az igénylés további feltételei?</h3>
+
+                <p>Az igénylő vagy együttes igénylés esetén legalább az egyikük rendelkezzen egy év társadalombiztosítási
+                jogviszonnyal.</p>
+                <p>Az igénylő, együttes igénylés esetén házastársa vagy élettársa sem rendelkezhet az állami adóhatóságnál
+                nyilvántartott köztartozással.</p>
+                <p>A Rendeletben meghatározott építési tevékenységekre vonatkozóan a kivitelezést végző vállalkozóval 2021.
+                január 1-je után megkötött szerződéssel kell rendelkeznie az igénylőnek.</p>
+                <p>Az igénylővel vagy házastársával/élettársával a felújítási munkák elvégzésére szerződött vállalkozó nem
+                lehet sem az igénylőnek, együttes igénylés esetén pedig sem a házastársának vagy élettársának a Polgári
+                Törvénykönyvről szóló 2013. évi V. törvény (a továbbiakban: Ptk.) szerinti közeli hozzátartozója, illetve
+                sem ők, sem a közeli hozzátartozóik nem rendelkezhetnek tulajdoni részesedéssel vagy nem tölthetnek be
+                tisztséget ezen vállalkozásban.</p>
+                <p>A felújítási munkákat 2021. január 1-je után kiállított és teljesített számlák másolatával kell igazolni. A
+                számlák vagy az igénylő, vagy együttes igénylés esetén házastársa/élettársa nevére és a felújított lakás
+                címére kell, hogy szóljanak.</p>
+                <p>Olyan számla nem fogadható el a felújítási tevékenységek vállalkozási díját, illetve a felhasznált
+                anyagköltségét illetően, amelyeket az igénylő a felújítással érintett lakás vonatkozásában a Falusi CSOK
+                kapcsán már elszámolt vagy elszámolni kíván.</p>
+                <p>Átutalással teljesítendő számlák esetén igazolni kell a számla kiegyenlítését a banki átutalást igazoló
+                dokumentum vagy a fizetési számlakivonat (bankkivonat) másolatával, amelyen egyértelműen beazonosíthatók az
+                egyes kiegyenlített számlák tételei.</p>
+                <p>Nagyon fontos feltétel, hogy a kérelemhez valamennyi szükséges nyilatkozatot az igénylő megfelelően kitöltse
+                és a kérelmével együtt nyújtsa be a Kincstárhoz.</p>
+
+                <h3>Milyen felújítással kapcsolatos tevékenységekre igényelhető a támogatás?</h3>
+
+                <p>A támogatott építési tevékenységeket a Rendelet 6. §-a sorolja fel, melyek az alábbiak:</p>
+
+                <ul>
+                <li>víz-, csatorna-, elektromos-, gáz-közműszolgáltatás bevezetése, illetve belső hálózatának kiépítése vagy
+                cseréje,</li>
+                <li>fürdőhelyiség, illetve WC létesítése olyan lakásban, amely nem rendelkezik ilyen helyiséggel,</li>
+                <li>fűtési rendszer kialakítása, korszerűsítése vagy elemeinek cseréje, ideértve a megújuló energiaforrások
+                alkalmazását is,</li>
+                <li>az épület külső festése, színezése, valamint szigetelése, utóbbinál ideértve a lábazatszigetelést, a hő-,
+                hang-, illetve vízszigetelési munkálatokat,</li>
+                <li>a külső nyílászáró cseréje, redőny, árnyékoló, spaletta, rovarháló, biztonsági rács felszerelése vagy
+                cseréje, párkányok, küszöbök cseréje vagy felújítása,</li>
+                <li>tető cseréje, felújítása, szigetelése,</li>
+                <li>égéstermék-elvezető építése, korszerűsítése,</li>
+                <li>klímaberendezés beépítése, cseréje,</li>
+                <li>napkollektor, napelemes rendszer telepítése, cseréje,</li>
+                <li>belső tér felújítása, ideértve
+                a lakás helyiségeinek belső fali, padló-, födém- vagy álmennyezeti burkolat cseréjét, felújítását, festését,
+                tapétázását,</li>
+                <li>a galériaépítést,</li>
+                <li>a belső lépcső kialakítását és cseréjét,</li>
+                <li>a szaniterek beépítését vagy cseréjét,</li>
+                <li>a villanykapcsolók és -dugaljak kialakítását és cseréjét,</li>
+                <li>a belső nyílászárók, belső párkányok, küszöbök beépítését, cseréjét vagy felújítását,</li>
+                <li>a lámpák vagy világítótestek beépítését vagy cseréjét,</li>
+                <li>a lakással azonos ingatlan-nyilvántartási helyrajzi számon található épület, nem lakás céljára szolgáló
+                helyiség (így különösen: nyári konyha, mosókonyha, tároló) felújítása,</li>
+                <li>kerítés építése,</li>
+                <li>gépjárműtároló építése vagy nyitott gépkocsibeálló kialakítása,</li>
+                <li>terasz, loggia, erkély, előtető építése,</li>
+                <li>térburkolat készítése, cseréje,</li>
+                <li>télikert kialakítása,</li>
+                </ul>
+                <p>amennyiben az igénylő vagy gyermeke mozgáskorlátozott személynek minősül, a 12/2001. (I. 31.) Korm. rendelet
+                9. § (10) bekezdésében meghatározott akadálymentesítési munkák,
+                alapozási szerkezet megerősítése,
+                beépíthető bútor vagy konyhai gép beépítése, cseréje, valamint
+                használati melegvíz rendszer kialakítása, korszerűsítése vagy elemeinek cseréje, ideértve a megújuló
+                energiaforrások alkalmazását is.</p>
+
+
+                <h3>Mekkora az igényelhető támogatás összege?</h3>
+
+                <p>A támogatás összege a lakás felújítására fordított költségeknek legfeljebb az 50%-a lehet, amely azonban nem
+                lehet több 3.000.000 Ft-nál. Fontos szabály, hogy a Kincstár által kiutalt támogatás összegében a
+                vállalkozási díj és az anyagköltség 50-50%-ban oszlik meg. Tehát a benyújtott kérelemhez csatolt számlák
+                között feltétlenül kell lennie minimum 25-25 % vállalkozási díjat és anyagköltséget tartalmazó számlának.</p>
+
+                <h3>Példák:</h3>
+
+                <ol>
+                <li>Felújítás teljes költsége: 6.000.000,- Ft
+                Anyagköltség: 4.500.000,- Ft
+
+                Munkadíj: 1.500.000,- Ft
+
+                Kifizethető támogatás: 3.000.000,- Ft
+                </li>
+                <p>Tekintettel arra, hogy a támogatás összegében az anyagköltség és a munkadíj arányának 50-50 %-nak kell
+                lennie, ami 1.500.000 - 1.500.000 Ft-tal teljesül, jár a maximális összeg.</p>
+
+                <li>Felújítás teljes költsége: 5.000.000,- Ft
+                Anyagköltség: 4.000.000,- Ft
+
+                Munkadíj: 1.000.000,- Ft
+
+                Kifizethető támogatás: 2.000.000,- Ft
+                </li>
+
+                <p>A maximális támogatási összeg 2.500.000,- Ft lenne, de mivel a munkadíj csak 1.000.000,- Ft-ot tesz ki, az
+                50-50 %-os szabály akkor érvényesül, ha az anyagköltségből is csak 1.000.000,- Ft-ot veszünk figyelembe, így
+                a kifizethető támogatás 2.000.000,- Ft.</p>
+
+                <li>Felújítás teljes költsége: 1.000.000,- Ft
+                Anyagköltség: 1.000.000,- Ft
+
+                Munkadíj: 0,- Ft
+
+                Kifizethető támogatás: 0,- Ft
+                </li>
+
+                <p>A kifizethető támogatás 500.000,- Ft lenne, ha legalább 250.000,- Ft összegű munkadíjról szóló számla is
+                benyújtásra került volna. Tekintettel arra, hogy ebben az esetben az egyik költség a lehetséges támogatási
+                összeg 50 %-a alatt van, az 50-50 %-os szabály semmiképpen nem érvényesülhet, így támogatás nem fizethető
+                ki.</p>
+                </ol>
+
+
+                <p>A támogatást kizárólag a jogszabályban felsorolt kivitelezési, építési munkák végrehajtását és az utolsó
+                számlák kiegyenlítését követően 60 napos határidőn belül lehet igényelni.</p>
+
+                <h3>Melyek az igénylés elbírálásához szükséges dokumentumok, amelyeket igénylőnek be kell nyújtania?</h3>
+
+                <p>A kitöltött kérelem mellett az alábbiakban felsorolt dokumentumok benyújtása szükséges:</p>
+
+                <table >
+                    <tr>
+                        <th>Sorszám</th>
+                        <th>Dokumentum megnevezése</th>
+                        <th>Kötelező</th>
+                        <th>Opcionális</th>
+                    </tr>
+                        
+                    <tr>
+                        <td>a)</td>
+                        <td>vállalkozási szerződések másolata</td>
+                        <td>X</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>b)</td>
+                        <td> számlák, valamint az átutalással teljesített számlák kifizetését igazoló dokumentum másolata</td>
+                        <td>X</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>c)</td>
+                        <td> az igénylő(k)nek és a támogatásra való jogosultságnál figyelembe vett gyermek(ek) lakcímet igazoló hatósági
+                        igazolványának másolata</td>
+                        <td>X</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>d)</td>
+                        <td>örökbefogadott gyermek esetén a gyámhatóság véglegessé vált engedélyező határozatának másolata </td>
+                        <td></td>
+                        <td> X</td>
+                    </tr>
+
+            <tr>
+                        <td>e)</td>
+                        <td>a várandósság 12. hetét betöltött magzat esetén a várandósgondozási könyv vonatkozó részének másolata, vagy
+                        a kezelőorvos által kiállított, a várandósság tényéről és annak fennállása időtartamáról szóló igazolás,
+                        valamint az igénylő arra vonatkozó nyilatkozata, hogy legkésőbb 60 nappal az élve születést követően a
+                        születési anyakönyvi kivonatot, a halvaszületést vagy a magzat elhalását követően az erre vonatkozó okiratot
+                        a Kincstár részére benyújtja </td>
+                        <td></td>
+                        <td> </td>
+                    </tr>
+
+
+
+                
+
+                </table>
+
+
+            </p>
+        </div>
     </main>
 
-    <!-- Footer / Mini bemutatkozás -->
-    <footer>
-        <p>Mi vagyunk az MRM Ingatlan, szakértők az ingatlanpiacon. Segítünk eladni, venni, értékelni és tanácsot adni
-            ingatlanügyekben. Forduljon hozzánk bizalommal!</p>
-    </footer>
+<footer>
+    <svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <path fill="#556B2F" fill-opacity="1" d="M0,128L26.7,122.7C53.3,117,107,107,160,133.3C213.3,160,267,224,320,240C373.3,256,427,224,480,229.3C533.3,235,587,277,640,277.7C693.3,283,747,256,800,218.7C853.3,181,907,139,960,144C1013.3,149,1067,203,1120,186.7C1173.3,171,1227,85,1280,74.7C1333.3,64,1387,128,1413,160L1440,192L1440,320L0,320Z"></path>
+    </svg>
+    <div id="footerDatas">
+        <div class="informations">
+            <h1>Rólunk</h1>
+            <ul class="Description">
+                <li><a href="../html/mrm_ingatlanok.html">Ingatlanok</a></li>
+                <li><a href="../html/mrm_bemutat.html">Bemutatkozás</a></li>
+                <li><a href="../html/mrm_kapcsolat.html">Kapcsolat</a></li>
+                <li><a href="../html/mrm_kapcsolat.html#Name">Üzenet</a></li>
+                <li><a href="../html/mrm_adoilletek.html">Pénzügy</a></li>
+            </ul>
+        </div>
 
+        <div class="slogen">
+            <p>Mi vagyunk az MRM Ingatlan. Segítünk eladni, venni, értékelni és tanácsot adni ingatlanügyekben.</p>
+        </div>
+
+        <div class="media">
+            <a href="https://www.instagram.com/miskolc_putri/" class="logos"><img id="InstagramLogo" src="../img/instagram.svg" alt=""></a>
+            <a href="" class="logos"><img id="FacebookLogo" src="../img/facebook.svg" alt=""></a>
+            <a href="" class="logos"><img id="XLogo" src="../img/x.png" alt=""></a>
+        </div>
+    </div>
+</footer>
 </body>
 
 </html>
