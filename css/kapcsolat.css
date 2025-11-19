@@ -129,3 +129,35 @@ form>fieldset>button:hover{
     color: #A4B939;
     cursor: pointer;
 }
+
+#Box{
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Box-content{
+    position: relative;
+    text-align: center;
+    background-color: #556B2F;
+    align-items: center;
+    overflow: auto;
+    margin-top: 20%;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 25px;
+    font-size: large;
+}

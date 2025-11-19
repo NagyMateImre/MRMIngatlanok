@@ -5,6 +5,10 @@ const Message = document.getElementById('Message');
 const SubmitB = document.getElementById('SubmitButton');
 SubmitB.style.display = "none";
 const ClearB = document.getElementById('ClearButton');
+const Box = document.getElementById('Box');
+Box.style.display = "none";
+const BoxH1 = document.getElementById('BoxH1');
+const BoxP = document.getElementById('BoxP');
 
 Name.addEventListener('input', function(){
     if(Name.value.length === 0 || Email.value.length === 0 || Mobile.value.length === 0 || Message.value.length === 0){
@@ -42,9 +46,18 @@ Message.addEventListener('input', function(){
     }
 })
 
-SubmitB.addEventListener('submit', (item) => {
+SubmitB.addEventListener('click', (item) => {
     item.preventDefault();
-
+    Box.style.display = "";
+        setTimeout(() => {
+        Box.style.display = "none";
+        Name.value = "";
+        Email.value = "";
+        Mobile.value = "";
+        Message.value = "";
+    }, 3200);
+    BoxH1.innerText = "Üzenete sikeresen rögzítve!";
+    BoxP.innerText = "Ügyfélszolgálatunk a lehető legharabb 48 órán belül Emailben fog válaszolni üzenetére.";
 })
 
 ClearB.addEventListener('click', (item) =>{
@@ -55,4 +68,11 @@ ClearB.addEventListener('click', (item) =>{
     Mobile.value = "";
     Message.value = "";
     SubmitB.style.display = "none"
-})
+    Box.style.display = "";
+    setTimeout(() => {
+        Box.style.display = "none";
+    }, 3200);
+    BoxH1.innerText = "Üzenete sikeresen törölve!";
+    BoxP.innerText = "Bármilyen kérdés estén keresse nyugodtan ügyfélszolgálatunk.";
+});
+

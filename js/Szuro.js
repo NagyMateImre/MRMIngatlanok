@@ -145,6 +145,7 @@ clearBtn.addEventListener('click', (e) => {
         MinP();
         MaxP();
         TeruletT();
+        card.style.opacity = "100%";
     });
 });
 

@@ -95,7 +95,7 @@
         line-height: 14px;
     }
 
-    form{
-        width: fit-content;
+    fieldset{
+        width: 300px;
     }
 }
