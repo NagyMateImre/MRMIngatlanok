@@ -103,7 +103,7 @@ form.addEventListener('submit', (event) => {
 
         const helyClean = toNormalForm(hely);
 
-        if(helyClean !== cardHely){
+        if(helyClean !== cardHely && cardHely != " "){
             show = false
         }
 

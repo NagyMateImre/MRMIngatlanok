@@ -152,4 +152,4 @@ let Tomb = [
     },
 ];
 
-localStorage.setItem("Tomb")
+localStorage.setItem("Tomb",Tomb.length)

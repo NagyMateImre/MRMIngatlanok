@@ -58,6 +58,8 @@ SubmitB.addEventListener('click', (item) => {
     }, 3200);
     BoxH1.innerText = "Üzenete sikeresen rögzítve!";
     BoxP.innerText = "Ügyfélszolgálatunk a lehető legharabb 48 órán belül Emailben fog válaszolni üzenetére.";
+    let Uzenet = [Name.value,Email.value,Mobile.value,Message.value];
+    localStorage.setItem("Uzenet",Uzenet);
 })
 
 ClearB.addEventListener('click', (item) =>{
