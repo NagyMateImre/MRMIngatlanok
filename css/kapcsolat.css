@@ -26,7 +26,7 @@
 
 #Contact_me{
     color: #EFF5D2;
-    line-height: 5px;
+    line-height: 10px;
     padding-bottom: 10px;
 }
 
@@ -61,6 +61,10 @@ form>fieldset>input{
     backdrop-filter: blur(4.9px);
     -webkit-backdrop-filter: blur(4.9px);
     border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+form>fieldset>input::placeholder, form>fieldset>textarea::placeholder{
+    color: #8FA31E;
 }
 
 form>fieldset>input:focus{
