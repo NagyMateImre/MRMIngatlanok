@@ -1,155 +1,158 @@
 let Tomb = [
     {
         Helyszin: "Budapest",
-        ar:45000000,
+        arMax : 45000000,
+        arMin : 42500000,
         Terulet :20,
         Elhelyezkedes : "Belváros",
         Tipus : "Lakás",
         szobak : 3
     },
     {
-        Helyszin: "Budapest",
-        arMax : 100000000,
+        Helyszin: "Szeged",
+        arMax : 22000000,
+        arMin : 19500000,
+        Terulet :145,
+        Elhelyezkedes : "Kertváros",
+        Tipus : "Ház",
+        szobak : 5
+    },
+    {
+        Helyszin: "Debrecen",
+        arMax : 10000000,
+        arMin : 20000000,
         Terulet :15,
         Elhelyezkedes : "Centrum",
-        Tipus : "Lakas",
+        Tipus : "Lakás",
+        szobak : 3
+    },
+    {
+        Helyszin: "Pécs",
+        arMax : 45000000,
+        arMin : 42500000,
+        Terulet :80,
+        Elhelyezkedes : "Belváros",
+        Tipus : "Lakás",
+        szobak : 3
+    },
+    {
+        Helyszin: "Győr",
+        arMax : 45000000,
+        arMin : 42500000,
+        Terulet :80,
+        Elhelyezkedes : "Külváros",
+        Tipus : "Lakás",
+        szobak : 3
+    },
+    {
+        Helyszin: "Miskolc",
+        arMax : 55000000,
+        arMin : 52500000,
+        Terulet :105,
+        Elhelyezkedes : "Külváros",
+        Tipus : "Lakás",
+        szobak : 4
+    },
+    {
+        Helyszin: "Kecskemét",
+        arMax : 72500000,
+        arMin : 70000000,
+        Terulet :95,
+        Elhelyezkedes : "Belváros",
+        Tipus : "Lakás",
+        szobak : 3
+    },
+    {
+        Helyszin: "Szombathely",
+        arMax : 87500000,
+        arMin : 85000000,
+        Terulet :120,
+        Elhelyezkedes : "Centrum",
+        Tipus : "Ház",
+        szobak : 5
+    },
+    {
+        Helyszin: "Eger",
+        arMax : 8500000,
+        arMin : 6000000,
+        Terulet :225,
+        Elhelyezkedes : "Külváros",
+        Tipus : "Telek",
+        szobak : 1
+    },
+    {
+        Helyszin: "Zalaegerszeg",
+        arMax : 25000000,
+        arMin : 22500000,
+        Terulet :85,
+        Elhelyezkedes : "Centrum",
+        Tipus : "Ház",
+        szobak : 2
+    },
+    {
+        Helyszin: "Sopron",
+        arMax : 14500000,
+        arMin : 12000000,
+        Terulet :55,
+        Elhelyezkedes : "Centrum",
+        Tipus : "Ház",
         szobak : 2
     },
     {
         Helyszin: "Budapest",
-        arMax : 100000000,
-        arMin : 20000000,
-        Terulet :15,
-        Elhelyezkedes : "Centrum",
-        Tipus : "Lakas",
+        arMax : 65000000,
+        arMin : 62500000,
+        Terulet :55,
+        Elhelyezkedes : "Belváros",
+        Tipus : "Lakás",
         szobak : 2
     },
     {
-        Helyszin: "Budapest",
-        arMax : 100000000,
-        arMin : 20000000,
-        Terulet :15,
+        Helyszin: "Szombathely",
+        arMax : 87500000,
+        arMin : 85000000,
+        Terulet :120,
         Elhelyezkedes : "Centrum",
-        Tipus : "Lakas",
-        szobak : 2
+        Tipus : "Ház",
+        szobak : 5
     },
     {
-        Helyszin: "Budapest",
-        arMax : 100000000,
-        arMin : 20000000,
-        Terulet :15,
-        Elhelyezkedes : "Centrum",
-        Tipus : "Lakas",
-        szobak : 2
+        Helyszin: "Eger",
+        arMax : 2500000,
+        arMin : 4000000,
+        Terulet :150,
+        Elhelyezkedes : "Külváros",
+        Tipus : "Telek",
+        szobak : 1
     },
     {
-        Helyszin: "Budapest",
-        arMax : 100000000,
-        arMin : 20000000,
-        Terulet :15,
-        Elhelyezkedes : "Centrum",
-        Tipus : "Lakas",
-        szobak : 2
+        Helyszin: "Zalaegerszeg",
+        arMax : 15000000,
+        arMin : 12500000,
+        Terulet :130,
+        Elhelyezkedes : "Külváros",
+        Tipus : "Telek",
+        szobak : 1
     },
     {
-        Helyszin: "Budapest",
-        arMax : 100000000,
-        arMin : 20000000,
-        Terulet :15,
-        Elhelyezkedes : "Centrum",
-        Tipus : "Lakas",
-        szobak : 2
+        Helyszin: "Miskolc",
+        arMax : 55000000,
+        arMin : 52500000,
+        Terulet :105,
+        Elhelyezkedes : "Külváros",
+        Tipus : "Lakás",
+        szobak : 4
     },
     {
-        Helyszin: "Budapest",
-        arMax : 100000000,
-        arMin : 20000000,
-        Terulet :15,
-        Elhelyezkedes : "Centrum",
-        Tipus : "Lakas",
-        szobak : 2
-    },
-    {
-        Helyszin: "Budapest",
-        arMax : 100000000,
-        arMin : 20000000,
-        Terulet :15,
-        Elhelyezkedes : "Centrum",
-        Tipus : "Lakas",
-        szobak : 2
-    },
-    {
-        Helyszin: "Budapest",
-        arMax : 100000000,
-        arMin : 20000000,
-        Terulet :15,
-        Elhelyezkedes : "Centrum",
-        Tipus : "Lakas",
-        szobak : 2
-    },
-    {
-        Helyszin: "Budapest",
-        arMax : 100000000,
-        arMin : 20000000,
-        Terulet :15,
-        Elhelyezkedes : "Centrum",
-        Tipus : "Lakas",
-        szobak : 2
-    },
-    {
-        Helyszin: "Budapest",
-        arMax : 100000000,
-        arMin : 20000000,
-        Terulet :15,
-        Elhelyezkedes : "Centrum",
-        Tipus : "Lakas",
-        szobak : 2
-    },
-    {
-        Helyszin: "Budapest",
-        arMax : 100000000,
-        arMin : 20000000,
-        Terulet :15,
-        Elhelyezkedes : "Centrum",
-        Tipus : "Lakas",
-        szobak : 2
-    },
-    {
-        Helyszin: "Budapest",
-        arMax : 100000000,
-        arMin : 20000000,
-        Terulet :15,
-        Elhelyezkedes : "Centrum",
-        Tipus : "Lakas",
-        szobak : 2
-    },
-    {
-        Helyszin: "Budapest",
-        arMax : 100000000,
-        arMin : 20000000,
-        Terulet :15,
-        Elhelyezkedes : "Centrum",
-        Tipus : "Lakas",
-        szobak : 2
-    },
-    {
-        Helyszin: "Budapest",
-        arMax : 100000000,
-        arMin : 20000000,
-        Terulet :15,
-        Elhelyezkedes : "Centrum",
-        Tipus : "Lakas",
-        szobak : 2
-    },
-    {
-        Helyszin: "Budapest",
-        arMax : 100000000,
-        arMin : 20000000,
-        Terulet :15,
-        Elhelyezkedes : "Centrum",
-        Tipus : "Lakas",
-        szobak : 2
+        Helyszin: "Szeged",
+        arMax : 105000000,
+        arMin : 10250000,
+        Terulet :175,
+        Elhelyezkedes : "Kertváros",
+        Tipus : "Ház",
+        szobak : 6
     },
 ];
 
-localStorage.setItem("Tomb",Tomb.length)
+localStorage.setItem("Tomb",JSON.stringify(Tomb))
+localStorage.setItem("osszeingatlan",Tomb.length)
