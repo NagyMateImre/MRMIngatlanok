@@ -124,7 +124,6 @@ nav{
 
         /* Modal */
         .modal {
-            display: none;
             position: fixed;
             z-index: 1001;
             left: 0;

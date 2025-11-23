@@ -149,13 +149,20 @@ clearBtn.addEventListener('click', (e) => {
     });
 });
 
-const Mname = document.getElementById('modalName');
-const MPrice = document.getElementById('modalPrice');
-const MT = document.getElementById('modalT');
-const Mroom = document.getElementById('modalRoom');
-const MD = document.getElementById('modalD');
 const modal = document.getElementById('modal');
+const ModalName = document.getElementById('ModalName');
+const ModalAr = document.getElementById('ModalAr');
+const ModalTerulet = document.getElementById('ModalTerulet');
+const ModalSzobak = document.getElementById('ModalSzobak');
+const ModalLeiras = document.getElementById('ModalLeiras');
+modal.style.display = "none";
 
-function Active(){
-    Mname.innerText = localStorage.getItem("Tomb");
+function ModalOpen(){
+    modal.style.display = "flex";
+    const JSONKapott = localStorage.getItem('Tomb')[1];
+    console.log(JSON.parse(JSONKapott))
+}
+
+function ModalClose(){
+    modal.style.display = "none";
 }
