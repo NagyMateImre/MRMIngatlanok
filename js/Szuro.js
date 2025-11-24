@@ -1,12 +1,70 @@
+const Ingatlanok = document.getElementById('Ingatlanok'); // Ezt nem használod a kódban, de itt hagyom
+const JSONKapott = localStorage.getItem('Tomb');
+const JsonAlakitott = JSON.parse(JSONKapott);
+
+const szuloElem = document.getElementById('Ingatlanok');
+
+for (let i = 0; i < JsonAlakitott.length; i++) {
+    const linkElem = document.createElement('a');
+    const cimElem = document.createElement('h3');
+
+    linkElem.setAttribute('onclick', 'ModalOpen()');
+    linkElem.setAttribute('href', '#modal');
+    linkElem.id = 'modal' + (i + 1); 
+    linkElem.className = 'property-card';
+
+    linkElem.setAttribute('data-Hely', JsonAlakitott[i].Helyszin);
+    linkElem.setAttribute('data-ar', JsonAlakitott[i].arMax);
+    linkElem.setAttribute('data-elhely', JsonAlakitott[i].Elhelyezkedes);
+    linkElem.setAttribute('data-tipus', JsonAlakitott[i].Tipus);
+    linkElem.setAttribute('data-szobak', JsonAlakitott[i].szobak);
+    linkElem.setAttribute('data-terulet', JsonAlakitott[i].Terulet);
+
+    cimElem.textContent = JsonAlakitott[i].Helyszin + ", " + JsonAlakitott[i].Elhelyezkedes;
+
+    linkElem.appendChild(cimElem);
+    szuloElem.appendChild(linkElem);
+}
+
 const form = document.querySelector('.filter-sidebar form');
 const card = document.querySelectorAll('.property-card');
-localStorage.setItem("Card",card);
 const arMin = document.getElementById('price-min');
 const arMax = document.getElementById('price-max');
 const Terulet = document.getElementById('Terulet');
 
+
+const modal = document.getElementById('modal');
+const ModalName = document.getElementById('ModalName');
+const ModalAr = document.getElementById('ModalAr');
+const ModalTerulet = document.getElementById('ModalTerulet');
+const ModalSzobak = document.getElementById('ModalSzobak');
+const ModalLeiras = document.getElementById('ModalLeiras');
+modal.style.display = "none";
+
+function ModalOpen(){
+    modal.style.display = "flex";
+    for (let i = 0; i < card.length; i++) {
+        for (let k = 0; k < JsonAlakitott; k++) {
+            if(
+            card[i].dataset.hely == JsonAlakitott[k].Helyszin &&
+            card[i].dataset.elhely == JsonAlakitott[k].Elhelyezkedes &&
+            card[i].dataset.tipus == JsonAlakitott[k].Tipus &&
+            card[i].dataset.ar == JsonAlakitott[k].arMax &&
+            card[i].dataset.terulet == JsonAlakitott[k].Terulet &&
+            card[i].dataset.szobak == JsonAlakitott[k].szobak 
+            ){
+                ModalName.textContent = "JsonAlakitott[k].Helyszin + ", " + JsonAlakitott[k].Elhelyezkedes";
+            }
+        }
+    }
+}
+function ModalClose(){
+    modal.style.display = "none";
+}
+
+
 if(card.length > 0){
-let TeruletMin = Infinity;
+var TeruletMin = Infinity;
 card.forEach(card => {
     const cardTeruletMin = parseInt(card.dataset.terulet);
     if(cardTeruletMin < TeruletMin){
@@ -148,21 +206,3 @@ clearBtn.addEventListener('click', (e) => {
         card.style.opacity = "100%";
     });
 });
-
-const modal = document.getElementById('modal');
-const ModalName = document.getElementById('ModalName');
-const ModalAr = document.getElementById('ModalAr');
-const ModalTerulet = document.getElementById('ModalTerulet');
-const ModalSzobak = document.getElementById('ModalSzobak');
-const ModalLeiras = document.getElementById('ModalLeiras');
-modal.style.display = "none";
-
-function ModalOpen(){
-    modal.style.display = "flex";
-    const JSONKapott = localStorage.getItem('Tomb')[1];
-    console.log(JSON.parse(JSONKapott))
-}
-
-function ModalClose(){
-    modal.style.display = "none";
-}
