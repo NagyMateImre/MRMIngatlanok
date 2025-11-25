@@ -1,6 +1,7 @@
 table, th, td, tr 
 {
     border: 1px solid black;
+    margin-top: 25px;
 }
 
 .forma{
@@ -13,8 +14,17 @@ table, th, td, tr
 }
 
 .forma h1{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bolder;
+    margin-bottom: 50px;
+}
+
+.forma ul{
+    line-height: 30px;
+}
+
+.forma ul li span{
+    font-weight: bold;
+    line-height: 40px;
 }
 
 .links{
@@ -25,4 +35,9 @@ table, th, td, tr
 
 .links:hover{
     color: #8FA31E;
+}
+
+#h3A{
+    text-decoration: none;
+    color :#556B2F;
 }

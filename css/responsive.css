@@ -98,4 +98,11 @@
     fieldset{
         width: 300px;
     }
+
+    table, th, td, tr 
+    {
+        margin-left: 0px;
+        margin-right: 100px;
+        text-align:center;
+    }
 }

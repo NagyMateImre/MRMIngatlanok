@@ -18,7 +18,7 @@
 
 #Header_Contact{
     background-color: #8FA31E;
-    line-height: 10px;
+    line-height: 15px;
     padding-bottom: 10px;
     padding-top: 10px;
     margin-top: 10px;
@@ -26,7 +26,7 @@
 
 #Contact_me{
     color: #EFF5D2;
-    line-height: 10px;
+    line-height: 15px;
     padding-bottom: 10px;
 }
 
@@ -177,10 +177,13 @@ form>fieldset>button:hover{
     margin-top: 10px;
     border-radius: 25px;
     color: white;
-    line-height: 5px;
+    line-height: 15px;
 }
 
 #tagok{
-    margin-bottom: -150px;
     z-index: 1002;
+    display: grid; 
+    grid-template-areas: "tag1 tag2 tag3";
+    justify-items: center; 
+    align-items: center;
 }
