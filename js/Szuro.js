@@ -41,23 +41,24 @@ const ModalSzobak = document.getElementById('ModalSzobak');
 const ModalLeiras = document.getElementById('ModalLeiras');
 modal.style.display = "none";
 
-function ModalOpen(){
+function ModalOpen() {
     modal.style.display = "flex";
     for (let i = 0; i < card.length; i++) {
-        for (let k = 0; k < JsonAlakitott; k++) {
+        for (let k = 0; k < JsonAlakitott.length; k++) { 
             if(
-            card[i].dataset.hely == JsonAlakitott[k].Helyszin &&
-            card[i].dataset.elhely == JsonAlakitott[k].Elhelyezkedes &&
-            card[i].dataset.tipus == JsonAlakitott[k].Tipus &&
-            card[i].dataset.ar == JsonAlakitott[k].arMax &&
-            card[i].dataset.terulet == JsonAlakitott[k].Terulet &&
-            card[i].dataset.szobak == JsonAlakitott[k].szobak 
+                card[i].dataset.hely == JsonAlakitott[k].Helyszin &&
+                card[i].dataset.elhely == JsonAlakitott[k].Elhelyezkedes &&
+                card[i].dataset.tipus == JsonAlakitott[k].Tipus &&
+                card[i].dataset.ar == JsonAlakitott[k].arMax &&
+                card[i].dataset.terulet == JsonAlakitott[k].Terulet &&
+                card[i].dataset.szobak == JsonAlakitott[k].szobak 
             ){
-                ModalName.textContent = "JsonAlakitott[k].Helyszin + ", " + JsonAlakitott[k].Elhelyezkedes";
+                ModalName.textContent = `${JsonAlakitott[k].Helyszin}, ${JsonAlakitott[k].Elhelyezkedes}`;
             }
         }
     }
 }
+
 function ModalClose(){
     modal.style.display = "none";
 }
