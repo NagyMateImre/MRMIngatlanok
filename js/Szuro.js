@@ -8,9 +8,9 @@ for (let i = 0; i < JsonAlakitott.length; i++) {
     const linkElem = document.createElement('a');
     const cimElem = document.createElement('h3');
 
-    linkElem.setAttribute('onclick', 'ModalOpen()');
+    linkElem.setAttribute('onclick', 'ModalOpen(this)');
     linkElem.setAttribute('href', '#modal');
-    linkElem.id = 'modal' + (i + 1); 
+    linkElem.id = 'modal' + JsonAlakitott[i].id; 
     linkElem.className = 'property-card';
 
     linkElem.setAttribute('data-Hely', JsonAlakitott[i].Helyszin);
@@ -41,22 +41,23 @@ const ModalSzobak = document.getElementById('ModalSzobak');
 const ModalLeiras = document.getElementById('ModalLeiras');
 modal.style.display = "none";
 
-function ModalOpen() {
+function ModalOpen(clickedElement) {
     modal.style.display = "flex";
-    for (let i = 0; i < card.length; i++) {
-        for (let k = 0; k < JsonAlakitott.length; k++) { 
-            if(
-                card[i].dataset.hely == JsonAlakitott[k].Helyszin &&
-                card[i].dataset.elhely == JsonAlakitott[k].Elhelyezkedes &&
-                card[i].dataset.tipus == JsonAlakitott[k].Tipus &&
-                card[i].dataset.ar == JsonAlakitott[k].arMax &&
-                card[i].dataset.terulet == JsonAlakitott[k].Terulet &&
-                card[i].dataset.szobak == JsonAlakitott[k].szobak 
-            ){
-                ModalName.textContent = `${JsonAlakitott[k].Helyszin}, ${JsonAlakitott[k].Elhelyezkedes}`;
-            }
-        }
+    
+    const fullId = clickedElement.id; 
+    const match = fullId.match(/(\d+)$/);
+
+    let lastNumberId = null;
+
+    if (match && match[1]) {
+        lastNumberId = parseInt(match[1]); 
     }
+
+
+    ModalName.textContent = `${JsonAlakitott[lastNumberId-1].Helyszin} - ${JsonAlakitott[lastNumberId-1].Elhelyezkedes} --- ${JsonAlakitott[lastNumberId].Tipus}`;
+    ModalAr.textContent = `Ár: ${JsonAlakitott[lastNumberId-1].arMax} FT`;
+    ModalTerulet.textContent = `Alapterület: ${JsonAlakitott[lastNumberId].Terulet} m²`
+    ModalSzobak.textContent = `Szobák száma: ${JsonAlakitott[lastNumberId].szobak}`
 }
 
 function ModalClose(){

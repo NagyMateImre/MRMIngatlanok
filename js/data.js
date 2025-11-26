@@ -6,7 +6,8 @@ let Tomb = [
         Terulet :20,
         Elhelyezkedes : "Belváros",
         Tipus : "Lakás",
-        szobak : 3
+        szobak : 3,
+        id : 1
     },
     {
         Helyszin: "Szeged",
@@ -15,7 +16,8 @@ let Tomb = [
         Terulet :145,
         Elhelyezkedes : "Kertváros",
         Tipus : "Ház",
-        szobak : 5
+        szobak : 5,
+        id : 2
     },
     {
         Helyszin: "Debrecen",
@@ -24,7 +26,8 @@ let Tomb = [
         Terulet :15,
         Elhelyezkedes : "Centrum",
         Tipus : "Lakás",
-        szobak : 3
+        szobak : 3,
+        id : 3
     },
     {
         Helyszin: "Pécs",
@@ -33,7 +36,8 @@ let Tomb = [
         Terulet :80,
         Elhelyezkedes : "Belváros",
         Tipus : "Lakás",
-        szobak : 3
+        szobak : 3,
+        id : 4
     },
     {
         Helyszin: "Győr",
@@ -42,7 +46,8 @@ let Tomb = [
         Terulet :80,
         Elhelyezkedes : "Külváros",
         Tipus : "Lakás",
-        szobak : 3
+        szobak : 3,
+        id : 5
     },
     {
         Helyszin: "Miskolc",
@@ -51,7 +56,8 @@ let Tomb = [
         Terulet :105,
         Elhelyezkedes : "Külváros",
         Tipus : "Lakás",
-        szobak : 4
+        szobak : 4,
+        id : 6
     },
     {
         Helyszin: "Kecskemét",
@@ -60,7 +66,8 @@ let Tomb = [
         Terulet :95,
         Elhelyezkedes : "Belváros",
         Tipus : "Lakás",
-        szobak : 3
+        szobak : 3,
+        id : 7
     },
     {
         Helyszin: "Szombathely",
@@ -69,7 +76,8 @@ let Tomb = [
         Terulet :120,
         Elhelyezkedes : "Centrum",
         Tipus : "Ház",
-        szobak : 5
+        szobak : 5,
+        id : 8
     },
     {
         Helyszin: "Eger",
@@ -78,7 +86,8 @@ let Tomb = [
         Terulet :225,
         Elhelyezkedes : "Külváros",
         Tipus : "Telek",
-        szobak : 1
+        szobak : 1,
+        id : 9
     },
     {
         Helyszin: "Zalaegerszeg",
@@ -87,7 +96,8 @@ let Tomb = [
         Terulet :85,
         Elhelyezkedes : "Centrum",
         Tipus : "Ház",
-        szobak : 2
+        szobak : 2,
+        id : 10
     },
     {
         Helyszin: "Sopron",
@@ -96,7 +106,8 @@ let Tomb = [
         Terulet :55,
         Elhelyezkedes : "Centrum",
         Tipus : "Ház",
-        szobak : 2
+        szobak : 2,
+        id : 11
     },
     {
         Helyszin: "Budapest",
@@ -105,7 +116,8 @@ let Tomb = [
         Terulet :55,
         Elhelyezkedes : "Belváros",
         Tipus : "Lakás",
-        szobak : 2
+        szobak : 2,
+        id : 12
     },
     {
         Helyszin: "Szombathely",
@@ -114,7 +126,8 @@ let Tomb = [
         Terulet :120,
         Elhelyezkedes : "Centrum",
         Tipus : "Ház",
-        szobak : 5
+        szobak : 5,
+        id : 13
     },
     {
         Helyszin: "Eger",
@@ -123,7 +136,8 @@ let Tomb = [
         Terulet :150,
         Elhelyezkedes : "Külváros",
         Tipus : "Telek",
-        szobak : 1
+        szobak : 1,
+        id : 14
     },
     {
         Helyszin: "Zalaegerszeg",
@@ -132,7 +146,8 @@ let Tomb = [
         Terulet :130,
         Elhelyezkedes : "Külváros",
         Tipus : "Telek",
-        szobak : 1
+        szobak : 1,
+        id : 15
     },
     {
         Helyszin: "Miskolc",
@@ -141,7 +156,8 @@ let Tomb = [
         Terulet :105,
         Elhelyezkedes : "Külváros",
         Tipus : "Lakás",
-        szobak : 4
+        szobak : 4,
+        id : 16
     },
     {
         Helyszin: "Szeged",
@@ -150,7 +166,8 @@ let Tomb = [
         Terulet :175,
         Elhelyezkedes : "Kertváros",
         Tipus : "Ház",
-        szobak : 6
+        szobak : 6,
+        id : 17
     },
 ];
 
