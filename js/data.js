@@ -7,7 +7,8 @@ let Tomb = [
         Elhelyezkedes : "Belváros",
         Tipus : "Lakás",
         szobak : 3,
-        id : 1
+        id : 1,
+        kep : "../img/Mark.png"
     },
     {
         Helyszin: "Szeged",
@@ -17,7 +18,8 @@ let Tomb = [
         Elhelyezkedes : "Kertváros",
         Tipus : "Ház",
         szobak : 5,
-        id : 2
+        id : 2,
+        kep : "../img/Mark.png"
     },
     {
         Helyszin: "Debrecen",

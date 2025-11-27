@@ -6,12 +6,18 @@ const szuloElem = document.getElementById('Ingatlanok');
 
 for (let i = 0; i < JsonAlakitott.length; i++) {
     const linkElem = document.createElement('a');
+    const linkKep = document.createElement('img');
     const cimElem = document.createElement('h3');
 
     linkElem.setAttribute('onclick', 'ModalOpen(this)');
     linkElem.setAttribute('href', '#modal');
     linkElem.id = 'modal' + JsonAlakitott[i].id; 
     linkElem.className = 'property-card';
+
+    linkKep.setAttribute('src','a');
+    linkKep.setAttribute('width','50px');
+    linkKep.setAttribute('height','50px')
+    linkKep.src = JsonAlakitott[i].kep;
 
     linkElem.setAttribute('data-Hely', JsonAlakitott[i].Helyszin);
     linkElem.setAttribute('data-ar', JsonAlakitott[i].arMax);
@@ -22,6 +28,7 @@ for (let i = 0; i < JsonAlakitott.length; i++) {
 
     cimElem.textContent = JsonAlakitott[i].Helyszin + ", " + JsonAlakitott[i].Elhelyezkedes;
 
+    linkElem.appendChild(linkKep);
     linkElem.appendChild(cimElem);
     szuloElem.appendChild(linkElem);
 }
