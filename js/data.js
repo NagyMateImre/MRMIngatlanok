@@ -8,7 +8,7 @@ let Tomb = [
         Tipus : "Lakás",
         szobak : 3,
         id : 1,
-        kep : "../img/Mark.png"
+        kep : "../img/sopron-centrum-lakas.jpg"
     },
     {
         Helyszin: "Szeged",
@@ -19,7 +19,7 @@ let Tomb = [
         Tipus : "Ház",
         szobak : 5,
         id : 2,
-        kep : "../img/Mark.png"
+        kep : "../img/bp-bv-haz.jpg"
     },
     {
         Helyszin: "Debrecen",
@@ -29,7 +29,8 @@ let Tomb = [
         Elhelyezkedes : "Centrum",
         Tipus : "Lakás",
         szobak : 3,
-        id : 3
+        id : 3,
+        kep : "../img/debrecen-centrum-lakas.jpg"
     },
     {
         Helyszin: "Pécs",
@@ -39,7 +40,8 @@ let Tomb = [
         Elhelyezkedes : "Belváros",
         Tipus : "Lakás",
         szobak : 3,
-        id : 4
+        id : 4,
+        kep : "../img/eger-kv-haz.jpg"
     },
     {
         Helyszin: "Győr",
@@ -49,7 +51,8 @@ let Tomb = [
         Elhelyezkedes : "Külváros",
         Tipus : "Lakás",
         szobak : 3,
-        id : 5
+        id : 5,
+        kep : "../img/gyor-kv-lakas.jpg"
     },
     {
         Helyszin: "Miskolc",
@@ -59,7 +62,8 @@ let Tomb = [
         Elhelyezkedes : "Külváros",
         Tipus : "Lakás",
         szobak : 4,
-        id : 6
+        id : 6,
+        kep : "../img/eger-kv-haz.jpg"
     },
     {
         Helyszin: "Kecskemét",
@@ -69,7 +73,8 @@ let Tomb = [
         Elhelyezkedes : "Belváros",
         Tipus : "Lakás",
         szobak : 3,
-        id : 7
+        id : 7,
+        kep : "../img/kecskemet-bv-haz.jpg"
     },
     {
         Helyszin: "Szombathely",
@@ -79,7 +84,8 @@ let Tomb = [
         Elhelyezkedes : "Centrum",
         Tipus : "Ház",
         szobak : 5,
-        id : 8
+        id : 8,
+        kep : "../img/Haz.png"
     },
     {
         Helyszin: "Eger",
@@ -89,7 +95,8 @@ let Tomb = [
         Elhelyezkedes : "Külváros",
         Tipus : "Telek",
         szobak : 1,
-        id : 9
+        id : 9,
+        kep : "../img/szh-centrum-telek.jpg"
     },
     {
         Helyszin: "Zalaegerszeg",
@@ -99,7 +106,8 @@ let Tomb = [
         Elhelyezkedes : "Centrum",
         Tipus : "Ház",
         szobak : 2,
-        id : 10
+        id : 10,
+        kep : "../img/miskolc-kv-haz.jpg"
     },
     {
         Helyszin: "Sopron",
@@ -109,7 +117,8 @@ let Tomb = [
         Elhelyezkedes : "Centrum",
         Tipus : "Ház",
         szobak : 2,
-        id : 11
+        id : 11,
+        kep : "../img/miskolc-kv-lakas.jpg"
     },
     {
         Helyszin: "Budapest",
@@ -119,7 +128,8 @@ let Tomb = [
         Elhelyezkedes : "Belváros",
         Tipus : "Lakás",
         szobak : 2,
-        id : 12
+        id : 12,
+        kep : "../img/miskolc-kv-lakas.jpg"
     },
     {
         Helyszin: "Szombathely",
@@ -129,7 +139,8 @@ let Tomb = [
         Elhelyezkedes : "Centrum",
         Tipus : "Ház",
         szobak : 5,
-        id : 13
+        id : 13,
+        kep : "../img/eger-kv-telek.jpg"
     },
     {
         Helyszin: "Eger",
@@ -139,7 +150,8 @@ let Tomb = [
         Elhelyezkedes : "Külváros",
         Tipus : "Telek",
         szobak : 1,
-        id : 14
+        id : 14,
+        kep : "../img/eger-kv-telek.jpg"
     },
     {
         Helyszin: "Zalaegerszeg",
@@ -149,7 +161,8 @@ let Tomb = [
         Elhelyezkedes : "Külváros",
         Tipus : "Telek",
         szobak : 1,
-        id : 15
+        id : 15,
+        kep : "../img/szh-centrum-telek2.jpg"
     },
     {
         Helyszin: "Miskolc",
@@ -159,7 +172,8 @@ let Tomb = [
         Elhelyezkedes : "Külváros",
         Tipus : "Lakás",
         szobak : 4,
-        id : 16
+        id : 16,
+        kep : "../img/ze-centrum-ház.jpg"
     },
     {
         Helyszin: "Szeged",
@@ -169,7 +183,8 @@ let Tomb = [
         Elhelyezkedes : "Kertváros",
         Tipus : "Ház",
         szobak : 6,
-        id : 17
+        id : 17,
+        kep : "../img/ze-kv-lakas.jpg"
     },
 ];
 
